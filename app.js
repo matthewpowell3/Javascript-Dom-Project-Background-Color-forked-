@@ -1,5 +1,6 @@
-// backgroundColors array
+// Arrays
 
+// backgroundColors array
 const backgroundColors = [
   'green',
   'Yellow',
@@ -8,6 +9,9 @@ const backgroundColors = [
   'linear-gradient(315deg, #20bf55 0%, #01baef 74%)',
   '#f15025',
 ];
+
+// fontColor array
+const fontStyle = ['Arial', 'San-serif', 'Poppins', 'Roboto', 'Lato'];
 
 // variables for the HTML content
 
@@ -20,6 +24,9 @@ const resetButton = document.getElementById('reset-btn');
 
 resetButton.addEventListener('click', function () {
   document.body.style.backgroundColor = 'white';
+  const randomFontNumber = getRandomNumberFont();
+  colorText.style.fontFamily = fontStyle[randomFontNumber];
+  console.log(randomFontNumber);
   colorText.textContent = 'White';
 });
 
@@ -65,4 +72,8 @@ function getRandomNumber() {
 
   /* without floor the number with never reach 6 so 
     we use Math.floor()*/
+}
+
+function getRandomNumberFont() {
+  return Math.floor(Math.random() * fontStyle.length);
 }
