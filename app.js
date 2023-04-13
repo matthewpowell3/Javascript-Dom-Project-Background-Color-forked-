@@ -5,7 +5,7 @@ const backgroundColors = [
   'Yellow',
   'Pink',
   'rgba(133,122,200)',
-  'linear-gradient(315deg, #20bf55 0%, #01baef 74%)',
+  'linear-gradient(315deg, #378b29 0%, #74d680 74%)',
   '#f15025',
 ];
 
@@ -29,7 +29,6 @@ btn.addEventListener('click', function () {
     document.body.style.backgroundImage = backgroundColors[randomColorNumber];
 
     // display the color string text
-
   } else {
     // changing the body's background
     document.body.style.backgroundColor = backgroundColors[randomColorNumber];
