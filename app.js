@@ -12,4 +12,5 @@ const backgroundColors = [
 // variables for the HTML content
 
 // getting the btn id from the index.html
-const btn = document.getElementById(btn);
+const btn = document.getElementById('btn');
+const color = document.getElementsByClassName('color');
