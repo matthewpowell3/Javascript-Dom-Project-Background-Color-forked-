@@ -13,12 +13,13 @@ const backgroundColors = [
 
 // getting the btn id from the index.html
 const btn = document.getElementById('btn');
-const color = document.getElementsByClassName('color');
+// the color texts
+const colorText = document.querySelector('.color');
 
 // adding a event listener to our btn id button
 btn.addEventListener('click', function () {
   // I want to get a number between 0 & 6 with math.random
-  const randomColorNumber = 4;
+  const randomColorNumber = 2;
 
   // making it where if the array index is 4 then the styles select is backgroundImage
   if (randomColorNumber == 4) {
@@ -26,5 +27,8 @@ btn.addEventListener('click', function () {
   } else {
     // changing the body's background
     document.body.style.backgroundColor = backgroundColors[randomColorNumber];
+
+    // displaying the color value
+    colorText.textContent = backgroundColors[randomColorNumber];
   }
 });
