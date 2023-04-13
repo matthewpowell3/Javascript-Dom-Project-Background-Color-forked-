@@ -5,7 +5,7 @@ const backgroundColors = [
   'Yellow',
   'Pink',
   'rgba(133,122,200)',
-  'lightgreen',
+  'linear-gradient(315deg, #20bf55 0%, #01baef 74%)',
   '#f15025',
 ];
 
@@ -18,7 +18,7 @@ const color = document.getElementsByClassName('color');
 // adding a event listener to our btn id button
 btn.addEventListener('click', function () {
   // I want to get a number between 0 & 6 with math.random
-  const randomColorNumber = ;
+  const randomColorNumber = 4;
   // changing the body's background
   document.body.style.backgroundColor = backgroundColors[randomColorNumber];
 });
