@@ -22,10 +22,9 @@ btn.addEventListener('click', function () {
 
   // making it where if the array index is 4 then the styles select is backgroundImage
   if (randomColorNumber == 4) {
-    document.body.style.backgroundImage =
-      'linear-gradient(315deg, #20bf55 0%, #01baef 74%)';
+    document.body.style.backgroundImage = backgroundColors[randomColorNumber];
+  } else {
+    // changing the body's background
+    document.body.style.backgroundColor = backgroundColors[randomColorNumber];
   }
-
-  // changing the body's background
-  document.body.style.backgroundColor = backgroundColors[randomColorNumber];
 });
