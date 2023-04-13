@@ -42,7 +42,15 @@ btn.addEventListener('click', function () {
 // create a random number function
 function getRandomNumber() {
   // return from the function a random number
-  return Math.random();
+  /* to get a number between 0 - 6 multiple backgroundColors.length
+     by Math.random()*/
+  return Math.random() * backgroundColors.length;
 
-  // Why am not getting a number am getting a decimal otr float point number to fix we use Math.floor()
+  /* Math.floor() will always round down to a closes integer*/
+
+  /* Why am not getting a number am getting a decimal otr float  
+     point number to fix we use Math.floor()*/
+
+  /* without floor the number with never reach 6 so 
+    we use Math.floor()*/
 }
