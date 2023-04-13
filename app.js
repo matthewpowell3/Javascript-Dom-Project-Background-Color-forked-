@@ -5,7 +5,7 @@ const backgroundColors = [
   'Yellow',
   'Pink',
   'rgba(133,122,200)',
-  'linear-gradient(315deg, #378b29 0%, #74d680 74%)',
+  'linear-gradient(315deg, #20bf55 0%, #01baef 74%)',
   '#f15025',
 ];
 
@@ -25,13 +25,17 @@ btn.addEventListener('click', function () {
   console.log(randomColorNumber);
 
   // making it where if the array index is 4 then the styles select is backgroundImage
-  if (randomColorNumber == backgroundColors[4]) {
+  if (randomColorNumber == 4) {
     document.body.style.backgroundImage = backgroundColors[randomColorNumber];
 
     // display the color string text
+    colorText.textContent = 'gradient(315deg, #20bf55 0%, #01baef 74%)';
   } else {
     // changing the body's background
     document.body.style.backgroundColor = backgroundColors[randomColorNumber];
+
+    // making the backgroundImage disapper with the style is backgroundColors
+    document.body.style.backgroundImage = 'none';
 
     // displaying the color value
     colorText.textContent = backgroundColors[randomColorNumber];
