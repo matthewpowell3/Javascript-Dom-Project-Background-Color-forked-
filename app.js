@@ -19,11 +19,14 @@ const colorText = document.querySelector('.color');
 // adding a event listener to our btn id button
 btn.addEventListener('click', function () {
   // I want to get a number between 0 & 6 with math.random
-  const randomColorNumber = 2;
+  const randomColorNumber = 4;
 
   // making it where if the array index is 4 then the styles select is backgroundImage
   if (randomColorNumber == 4) {
     document.body.style.backgroundImage = backgroundColors[randomColorNumber];
+
+    // display the color string text
+    colorText.textContent = 'gradient(315deg, #20bf55 0%, #01baef 74%)';
   } else {
     // changing the body's background
     document.body.style.backgroundColor = backgroundColors[randomColorNumber];
