@@ -15,6 +15,13 @@ const backgroundColors = [
 const btn = document.getElementById('btn');
 // the color texts
 const colorText = document.querySelector('.color');
+// reset button
+const resetButton = document.getElementById('reset-btn');
+
+resetButton.addEventListener('click', function () {
+  document.body.style.backgroundColor = 'white';
+  colorText.textContent = 'White';
+});
 
 // adding a event listener to our btn id button
 btn.addEventListener('click', function () {
