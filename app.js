@@ -19,7 +19,10 @@ const colorText = document.querySelector('.color');
 // adding a event listener to our btn id button
 btn.addEventListener('click', function () {
   // I want to get a number between 0 - 6 with math.random
-  const randomColorNumber = 4;
+  const randomColorNumber = getRandomNumber();
+
+  // Why am not getting a number am getting a decimal otr float point number to fix we use Math.floor()
+  console.log(randomColorNumber);
 
   // making it where if the array index is 4 then the styles select is backgroundImage
   if (randomColorNumber == 4) {
@@ -40,4 +43,6 @@ btn.addEventListener('click', function () {
 function getRandomNumber() {
   // return from the function a random number
   return Math.random();
+
+  // Why am not getting a number am getting a decimal otr float point number to fix we use Math.floor()
 }
