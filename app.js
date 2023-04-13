@@ -18,7 +18,7 @@ const colorText = document.querySelector('.color');
 
 // adding a event listener to our btn id button
 btn.addEventListener('click', function () {
-  // I want to get a number between 0 & 6 with math.random
+  // I want to get a number between 0 - 6 with math.random
   const randomColorNumber = 4;
 
   // making it where if the array index is 4 then the styles select is backgroundImage
@@ -35,3 +35,9 @@ btn.addEventListener('click', function () {
     colorText.textContent = backgroundColors[randomColorNumber];
   }
 });
+
+// create a random number function
+function getRandomNumber() {
+  // return from the function a random number
+  return Math.random();
+}
