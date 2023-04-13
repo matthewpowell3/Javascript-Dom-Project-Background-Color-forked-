@@ -25,7 +25,7 @@ btn.addEventListener('click', function () {
   console.log(randomColorNumber);
 
   // making it where if the array index is 4 then the styles select is backgroundImage
-  if (randomColorNumber == 4) {
+  if (randomColorNumber == backgroundColors[4]) {
     document.body.style.backgroundImage = backgroundColors[randomColorNumber];
 
     // display the color string text
@@ -44,7 +44,9 @@ function getRandomNumber() {
   // return from the function a random number
   /* to get a number between 0 - 6 multiple backgroundColors.length
      by Math.random()*/
-  return Math.random() * backgroundColors.length;
+  return Math.floor(Math.random() * backgroundColors.length);
+
+  // return Math.random() * backgroundColors.length;
 
   /* Math.floor() will always round down to a closes integer*/
 
