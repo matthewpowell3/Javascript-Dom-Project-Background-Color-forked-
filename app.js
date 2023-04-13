@@ -11,7 +11,17 @@ const backgroundColors = [
 ];
 
 // fontColor array
-const fontStyle = ['Arial', 'San-serif', 'Poppins', 'Roboto', 'Lato'];
+const fontStyle = [
+  'Arial',
+  'San-serif',
+  'Courier New',
+  ' Courier',
+  'monospace',
+  'Segoe UI',
+  'Tahoma',
+  'Geneva',
+  'Verdana',
+];
 
 // variables for the HTML content
 
@@ -19,15 +29,14 @@ const fontStyle = ['Arial', 'San-serif', 'Poppins', 'Roboto', 'Lato'];
 const btn = document.getElementById('btn');
 // the color texts
 const colorText = document.querySelector('.color');
+// the title
+const title = document.getElementById('title');
 // reset button
 const resetButton = document.getElementById('reset-btn');
 
 resetButton.addEventListener('click', function () {
   document.body.style.backgroundColor = 'white';
-  const randomFontNumber = getRandomNumberFont();
-  colorText.style.fontFamily = fontStyle[randomFontNumber];
-  console.log(randomFontNumber);
-  colorText.textContent = 'White';
+  title.style.fontFamily = 'Arial';
 });
 
 // adding a event listener to our btn id button
@@ -36,7 +45,7 @@ btn.addEventListener('click', function () {
   const randomColorNumber = getRandomNumber();
 
   // Why am not getting a number am getting a decimal otr float point number to fix we use Math.floor()
-  console.log(randomColorNumber);
+  // console.log(randomColorNumber);
 
   // making it where if the array index is 4 then the styles select is backgroundImage
   if (randomColorNumber == 4) {
@@ -54,6 +63,11 @@ btn.addEventListener('click', function () {
     // displaying the color value
     colorText.textContent = backgroundColors[randomColorNumber];
   }
+
+  // Font family change
+  const randomFontNumber = getRandomNumberFont();
+  title.style.fontFamily = fontStyle[randomFontNumber];
+  colorText.textContent = 'White';
 });
 
 // create a random number function
