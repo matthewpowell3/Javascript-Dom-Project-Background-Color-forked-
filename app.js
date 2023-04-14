@@ -23,6 +23,9 @@ const fontStyle = [
   'Verdana',
 ];
 
+// pushing something to the array
+fontStyle.push('Franklin Gothic Medium');
+
 // variables for the HTML content
 
 // getting the btn id from the index.html
