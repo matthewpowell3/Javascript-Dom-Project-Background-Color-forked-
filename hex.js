@@ -28,7 +28,10 @@ colorSelector.addEventListener('click', function () {
     // adding hashtag to haxcode
     hexCode += hex[randomHexCode()];
   }
+
   colorText.textContent = hexCode;
+  // copy to clipboard
+  navigator.clipboard.writeText(hexCode);
   document.body.style.backgroundColor = hexCode;
 });
 

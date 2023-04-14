@@ -3,14 +3,13 @@
 Fonts
 ===============
 */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
 
 /*
 =============== 
 Variables
 ===============
 */
-
 
 :root {
   /* dark shades of primary color*/
@@ -44,8 +43,8 @@ Variables
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
   --clr-black: #222;
-  --ff-primary: "Roboto", sans-serif;
-  --ff-secondary: "Open Sans", sans-serif;
+  --ff-primary: 'Roboto', sans-serif;
+  --ff-secondary: 'Open Sans', sans-serif;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
@@ -127,6 +126,7 @@ p {
   h3,
   h4 {
     line-height: 1;
+    z-index: 100;
   }
 }
 /*  global classes */
@@ -232,4 +232,18 @@ main {
 .btn-hero:hover {
   color: var(--clr-white);
   background: var(--clr-black);
+}
+
+
+#tooltip {
+  background-color: #222;
+  color: #fff;
+  position: absolute;
+  top: 36%;
+  right: 30%;
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 6px;
+  z-index: 1;
+  display: none;
 }
