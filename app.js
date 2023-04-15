@@ -67,10 +67,12 @@ btn.addEventListener('click', function () {
     colorText.textContent = backgroundColors[randomColorNumber];
   }
 
+  navigator.clipboard.writeText(backgroundColors[randomColorNumber]);
+
   // Font family change
   const randomFontNumber = getRandomNumberFont();
   title.style.fontFamily = fontStyle[randomFontNumber];
-  colorText.textContent = 'White';
+
 });
 
 // create a random number function

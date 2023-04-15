@@ -210,9 +210,7 @@ main {
   border-radius: var(--radius);
   margin-bottom: 2.5rem;
 }
-.color {
-  color: var(--clr-primary-5);
-}
+
 .btn-hero {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-transform: uppercase;
@@ -234,15 +232,27 @@ main {
   background: var(--clr-black);
 }
 
-#tooltip {
-  background-color: #222;
-  color: #fff;
+.color {
+  display: inline-block;
+  position: relative;
+  color: var(--clr-primary-5);
+}
+
+.color::after {
+  font-size: 18px;
+  font-weight: normal;
+  white-space: nowrap;
+  content: 'Click To Copy';
+  color: #222;
   position: absolute;
-  top: 36%;
-  right: 30%;
-  font-weight: 600;
-  padding: 5px;
-  border-radius: 6px;
-  z-index: 1;
-  display: none;
+  top: -50px;
+  left: 50%;
+  transform: translateX(0%);
+  transition: all 0.35s ease 0s;
+  opacity: 0;
+}
+
+.color:hover::after {
+  transform: translateX(-50%);
+  opacity: 1;
 }

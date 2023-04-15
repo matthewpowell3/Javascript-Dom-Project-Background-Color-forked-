@@ -38,3 +38,4 @@ colorSelector.addEventListener('click', function () {
 function randomHexCode() {
   return Math.floor(Math.random() * hex.length);
 }
+
