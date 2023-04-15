@@ -30,8 +30,9 @@ fontStyle.push('Franklin Gothic Medium');
 
 // getting the btn id from the index.html
 const btn = document.getElementById('btn');
-// the color texts
+// Select the .color element
 const colorText = document.querySelector('.color');
+
 // the title
 const title = document.getElementById('title');
 // reset button
@@ -72,7 +73,6 @@ btn.addEventListener('click', function () {
   // Font family change
   const randomFontNumber = getRandomNumberFont();
   title.style.fontFamily = fontStyle[randomFontNumber];
-
 });
 
 // create a random number function
